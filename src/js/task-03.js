@@ -20,7 +20,7 @@ function getGallery(array) {
   const image = array
     .map(({ url, alt }) => `<li class = "list-item"><img src="${url}" alt="${alt}" class = "picture">${alt}</li>`)
     .join("");
-  console.log(image);
+  // console.log(image);
 
   gallery.insertAdjacentHTML("beforeend", image);
 }

@@ -6,7 +6,7 @@ function getListIngredients(arr) {
   const ingredient = arr.map((el) => {
     const ingredientEl = document.createElement("li");
     ingredientEl.classList.add("item");
-    ingredientEl.textContent = `${el}`;
+    ingredientEl.textContent = el;
     return ingredientEl;
   });
 

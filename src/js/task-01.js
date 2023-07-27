@@ -1,13 +1,9 @@
-const arrCategories = document.querySelector("#categories");
-console.log("Number of categories:", arrCategories.children.length);
+const category = document.querySelector("#categories");
+console.log("Number of categories:", category.children.length);
 
-const arr = [];
+const item = category.querySelectorAll(".item");
+item.forEach((el) =>
+  console.log(`Category: ${el.querySelector("h2").textContent}
+Elements: ${el.querySelector("ul").children.length}`)
+);
 
-[...arrCategories.children].forEach((element) => {
-  return arr.push({
-    Category: element.querySelector("h2").textContent,
-    Elements: element.querySelectorAll("li").length,
-  });
-});
-
-arr.map((el) => console.log(el));
